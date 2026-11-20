@@ -1,6 +1,5 @@
 const ctx = document.getElementById('demandChart').getContext('2d');
 
-// Placeholder Data - Akan diganti dengan data dari CSV/JSON
 const demandData = {
     labels: ['01:00', '02:00', '03:00', '04:00', '05:00'],
     datasets: [
@@ -27,11 +26,21 @@ new Chart(ctx, {
     options: {
         responsive: true,
         plugins: {
-            legend: { position: 'bottom' }
+            legend: { labels: { color: '#f8fafc' } }
         },
         scales: {
-            y: { grid: { display: false } },
-            x: { grid: { display: false } }
+            y: { grid: { color: '#334155' }, ticks: { color: '#94a3b8' } },
+            x: { grid: { color: '#334155' }, ticks: { color: '#94a3b8' } }
         }
     }
+});
+
+document.getElementById('predict-btn').addEventListener('click', () => {
+    const temp = parseFloat(document.getElementById('temp').value);
+    const hour = parseFloat(document.getElementById('hour').value);
+    
+    // Simulasi hasil prediksi
+    const prediction = 800 + (temp * 4.5) + (hour * 8.2);
+    
+    document.getElementById('prediction-result').innerText = prediction.toFixed(2) + " MW";
 });
