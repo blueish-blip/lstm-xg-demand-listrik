@@ -1,0 +1,52 @@
+:root {
+    --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --mint: #A8E6CF;
+    --peach: #FFD3B6;
+    --bg: #FAFAFA;
+    --text: #222;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 60px 20px;
+}
+
+header {
+    margin-bottom: 80px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 20px;
+}
+
+header h1 { font-size: 3rem; margin: 0; text-transform: uppercase; letter-spacing: -2px; }
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.card {
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #000;
+}
+
+.card h3 { font-size: 0.8rem; text-transform: uppercase; margin: 0 0 10px 0; }
+.card .value { font-size: 2rem; font-weight: bold; margin: 0; }
+
+.chart-container {
+    background: #fff;
+    padding: 40px;
+    border: 1px solid #000;
+    margin-bottom: 80px;
+}
+
+.about {
+    max-width: 600px;
+}
+
+h2 { font-size: 1.5rem; text-transform: uppercase; }
